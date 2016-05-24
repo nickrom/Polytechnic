@@ -97,7 +97,6 @@ public:
     }
 
     void print_all(queue<struct Dog> dogs) {
-        cout << "ID\tКличка\tПорода\tХозяин\tID отца\tID матери" << endl;
         cout << "Dog\t";
         print(dogs.front());
         dogs.pop();
@@ -154,7 +153,7 @@ public:
         ofstream fout(db_name);
         for(int i=0; i<count; i++) {
             fout << kennel.at(i).id << "  " << kennel.at(i).nickname << "  " << kennel.at(i).breed << "  " <<
-                    kennel.at(i).owner << "  " << kennel.at(i).father_id << "  " << kennel.at(i).mother_id;
+                    kennel.at(i).owner << "  " << kennel.at(i).father_id << "  " << kennel.at(i).mother_id << endl;
         }
         count=0;
         kennel.clear();
